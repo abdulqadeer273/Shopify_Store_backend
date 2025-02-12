@@ -4,18 +4,21 @@ export type User = {
     userId: number;
     username: string;
     password: string;
-}
+    roles: string[]; // Added roles to enforce strict access
+};
 
 const users: User[] = [
     {
         userId: 1,
         username: 'admin',
-        password: 'admin'
+        password: 'admin',
+        roles: ['admin'] // Admin role
     },
     {
         userId: 2,
         username: 'user',
-        password: 'rana1234'
+        password: 'rana1234',
+        roles: ['user'] // Regular user role
     }
 ];
 
